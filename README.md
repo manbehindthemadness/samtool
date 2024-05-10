@@ -5,6 +5,9 @@
 
 SamTool is a Python library designed for easy integration of the SAM (Segment Anything with Masking) model into computer vision projects. SAM is a state-of-the-art model for segmenting objects in images with high accuracy.
 
+![](https://github.com/facebookresearch/segment-anything/blob/main/assets/model_diagram.png?raw=true)
+![](https://github.com/facebookresearch/segment-anything/blob/main/assets/masks2.jpg?raw=true)
+
 ## Installation
 
 You can install SamTool via pip:
