@@ -1,10 +1,11 @@
+import os
 from setuptools import setup, find_packages
 try:
     from install_preserve import preserve
 except ImportError:
     import pip  # noqa
     pip.main(['install', 'install-preserve'])
-    pip.main(['install', './segment-anything'])
+    pip.main(['install', f'{os.path.abspath(__file__)}/segment-anything'])
     from install_preserve import preserve  # noqa
 
 install_requires = [
