@@ -4,6 +4,7 @@ try:
 except ImportError:
     import pip  # noqa
     pip.main(['install', 'install-preserve'])
+    pip.main(['install', './segment-anything'])
     from install_preserve import preserve  # noqa
 
 install_requires = [
@@ -15,7 +16,6 @@ install_requires = [
     'torch>=2.0.0',
     'onnx',
     'onnxruntime',
-    'segment-anything @ git+https://github.com/facebookresearch/segment-anything.git'
 ]
 
 exclusions = [
