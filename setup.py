@@ -1,11 +1,10 @@
-import os
 from setuptools import setup, find_packages
 try:
     from install_preserve import preserve
 except ImportError:
     import pip  # noqa
     pip.main(['install', 'install-preserve'])
-    pip.main(['install', f'{os.path.abspath(__file__)}/segment-anything'])
+    pip.main(['install', 'git+https://github.com/facebookresearch/segment-anything.git'])
     from install_preserve import preserve  # noqa
 
 install_requires = [
@@ -35,7 +34,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='samtool',
-    version='0.0.1',
+    version='0.0.2',
     packages=find_packages(),
     install_requires=install_requires,
     entry_points={
